@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap");
+
+.preloader {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/src/assets/background_tv_effect.gif");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-content h1 {
+    text-transform: uppercase;
+    font-size: calc(3rem + 2vw);
+    color: #fff;
+    font-family: "Rubik Iso", cursive;
+    letter-spacing: 10px;
+}
