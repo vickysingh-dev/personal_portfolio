@@ -1,27 +1,118 @@
 .navbar {
-    /* position: fixed;
-    top: 0; */
     width: 100%;
-    border: 1px solid red;
-    padding-inline: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
 nav {
+    width: 100%;
     display: flex;
+    align-items: flex-end;
     justify-content: flex-end;
 }
 .nav-list {
-    width: max(50%, 400px);
-    display: flex;
-    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: 0.75s ease-in-out;
 }
-.nav-item {
-    padding-block: 0.5rem;
+.menu-btn {
+    margin-top: 25px;
+    margin-right: 25px;
+    height: 30px;
+    width: 50px;
+    position: relative;
+    scale: 0.85;
+    z-index: 100;
 }
-.nav-link {
-    /* color: #fff; */
-    text-transform: uppercase;
-    font-size: 1.5rem;
+.slant {
+    width: 50px;
+    height: 3px;
+    background-color: yellow;
+    position: absolute;
+    border-radius: 5px;
 }
-.nav-link:hover {
+.slant.top {
+    top: 0;
+    left: 0;
+}
+.slant.middle {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.slant.bottom {
+    bottom: 0;
+    left: 0;
+}
+.menu-btn.close .slant.middle {
+    display: none;
+}
+.menu-btn.close .slant.top {
+    rotate: 45deg;
+}
+.menu-btn.close .slant.bottom {
+    bottom: unset;
+    top: 0;
+    rotate: -45deg;
+}
+.menu-btn:hover {
     cursor: pointer;
+    transform: translate(0, -5%);
+}
+.menu-btn:hover > .slant {
+    box-shadow: 0 0 5px 1px yellow;
+}
+@media (min-width: 650px) {
+    .navbar {
+        width: 100%;
+        padding-inline: 2rem;
+        z-index: 100;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .nav-list {
+        position: relative;
+        width: max(50%, 400px);
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-item {
+        padding-block: 0.5rem;
+        position: relative;
+    }
+    .nav-item::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background-color: yellow;
+        transition: 0.5s ease;
+    }
+    .nav-item:hover::after {
+        width: 100%;
+    }
+    .nav-link {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-family: var(--font-genos);
+    }
+    .nav-link:hover {
+        cursor: pointer;
+    }
 }
