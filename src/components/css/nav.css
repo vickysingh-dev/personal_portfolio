@@ -1,0 +1,13 @@
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300vh;
+    width: 200px;
+    border: 2px solid yellow;
+}
+.mini-nav-list {
+    position: sticky;
+    top: 0;
+    right: 0;
+}

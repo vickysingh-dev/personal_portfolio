@@ -8,7 +8,8 @@ export default function Preloader() {
         const txtElement = document.querySelector(".loading-value");
         const words = JSON.parse(txtElement.getAttribute("data-words"));
         const wait = txtElement.getAttribute("data-wait");
-
+        // document.querySelector(".loading-content>h1").style.transform =
+        //     "translateY(0)";
         new PreLoader(txtElement, words, wait);
     }, []);
 
@@ -17,7 +18,7 @@ export default function Preloader() {
             <div className="loading-content">
                 <h1
                     className="loading-value"
-                    data-wait="2500"
+                    data-wait="2000"
                     data-words='["developer?", "programmer", "creator..!"]'
                 >
                     vickysingh

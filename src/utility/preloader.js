@@ -19,7 +19,7 @@ function shuffle(txtElement, word) {
                 clearInterval(interval);
             }
             iteration += 1;
-        }, 100);
+        }, 80);
     });
 }
 
@@ -40,6 +40,9 @@ PreLoader.prototype.call_function = function () {
         }
         this.wordIndex += 1;
         setTimeout(() => this.call_function(), this.wait);
+    } else {
+        // document.querySelector(".preloader").style.transform =
+        //     "translateY(-100%)";
     }
 };
 

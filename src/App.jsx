@@ -1,8 +1,9 @@
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
-import Experience from "./components/Experience";
+import Techs from "./components/Techs";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Extra from "./components/Extra";
@@ -12,21 +13,14 @@ import Footer from "./components/Footer";
 function App() {
     return (
         <div className="App">
-            <Preloader />
-            <nav>
-                <Navbar />
-            </nav>
-            <section>
+            {/* <Preloader /> */}
+            <Navbar />
+            <section id="one">
                 <Home />
-            </section>
-            <section>
+                {/* <Nav /> */}
                 <About />
-            </section>
-            <section>
-                <Experience />
-            </section>
-            <section>
                 <Skills />
+                <Techs />
             </section>
             <section>
                 <Projects />

@@ -1,0 +1,27 @@
+.navbar {
+    /* position: fixed;
+    top: 0; */
+    width: 100%;
+    border: 1px solid red;
+    padding-inline: 2rem;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-list {
+    width: max(50%, 400px);
+    display: flex;
+    justify-content: space-between;
+}
+.nav-item {
+    padding-block: 0.5rem;
+}
+.nav-link {
+    /* color: #fff; */
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.nav-link:hover {
+    cursor: pointer;
+}

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap");
 
+/* ================= preloader ================== */
+
 .preloader {
     position: absolute;
     width: 100%;
@@ -8,6 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.75s ease-in-out;
+}
+.loading-content {
+    border: 1px solid #fff;
 }
 .loading-content h1 {
     text-transform: uppercase;
@@ -15,4 +21,26 @@
     color: #fff;
     font-family: "Rubik Iso", cursive;
     letter-spacing: 10px;
+    /* transform: translateY(100%);
+    transition: 1s ease; */
+}
+
+/* ================== navbar ================ */
+
+/* section#one {
+    position: relative;
+} */
+
+/* ====================== home ==================== */
+
+.home {
+    height: 100vh;
+    background-color: var(--primary-black);
+}
+
+/* ==================== about ================== */
+
+.about {
+    height: 100vh;
+    background-color: var(--primary-green);
 }

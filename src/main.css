@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Gajraj+One&family=Genos:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap");
+
 *,
 *::after,
 *::before {
@@ -17,8 +19,24 @@ a {
 /* variables */
 
 :root {
+    /* theme colors  */
     --primary-black: hsl(216, 18%, 16%);
     --primary-green: hsl(217, 10%, 25%);
     --primary-yellow: hsl(42, 100%, 71%);
     --primary-white: hsl(0, 0%, 93%);
+
+    /* standard colors  */
+    --black: #000;
+    --white: #fff;
+
+    /* fonts */
+    --font-antom: "Anton", sans-serif;
+    --font-wide: "Gajraj One", cursive;
+    --font-genos: "Genos", sans-serif;
+    --font-cursive: "Shadows Into Light", cursive;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
 }
